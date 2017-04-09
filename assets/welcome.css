@@ -1,0 +1,75 @@
+<!-- Gallery CSS -->
+.gallery-title {
+    font-size: 36px;
+    color: #7ec0ee;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+
+.gallery-title:after {
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #00394c;
+}
+
+.filter-button {
+    font-size: 18px;
+    border: 1px solid #7ec0ee;
+    border-radius: 5px;
+    text-align: center;
+    color: #71acd6;
+    margin-bottom: 30px;
+
+}
+
+.filter-button:hover {
+    font-size: 18px;
+    border: 1px solid #7ec0ee;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #7ec0ee;
+
+}
+
+.filter-button.active {
+    background-color: #7ec0ee;
+    color: white;
+}
+
+.port-image {
+    width: 100%;
+}
+
+.gallery_product {
+    margin-bottom: 30px;
+}
+
+/*end gallery css*/
+
+.thumbnail img {
+    width: 225px;
+    height: 175px;
+}
+
+.thumbnail {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #CCC;
+}
+
+<!-- Search box css -->
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
