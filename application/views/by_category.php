@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Image Gallery</title>
     <!--CSS -->
     <link rel="stylesheet" href="<?php echo base_url("assets/bootstrap/css/bootstrap.css"); ?>"/>
-    <link rel="stylesheet" href="<?php echo base_url("assets/welcome.css") ?>">
+    <link rel="stylesheet" href="<?php echo base_url("assets/custom-style.css") ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/admin/font-awesome/css/font-awesome.css"); ?>"/>
 
 </head>
