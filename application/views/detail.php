@@ -7,40 +7,72 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Image Gallery</title>
     <!--CSS -->
     <link rel="stylesheet" href="<?php echo base_url("assets/bootstrap/css/bootstrap.css"); ?>"/>
-    <link rel="stylesheet" href="<?php echo base_url("assets/welcome.css") ?>">
+    <link rel="stylesheet" href="<?php echo base_url("assets/custom-style.css") ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/admin/font-awesome/css/font-awesome.css"); ?>"/>
 
 </head>
 <body>
 <?php $this->load->view('top_menu'); ?>
-
 <div class="container">
     <div class="row">
-        <div class="container">
-            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="gallery-title text-center">Gallery</h1>
-            </div>
-            <div class="col-sm-6 col-sm-offset-3 gallery_product">
-                <div id="imaginary_container">
-                    <form action="<?php echo site_url('home'); ?>" method="get">
-                        <div class="input-group stylish-input-group">
-                            <input type="text" name="search" class="form-control"  placeholder="Search" >
-                            <span class="input-group-addon">
-                                <button type="submit">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                            </span>
-                        </div>
-                    </form>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center"><?php echo $item['title'] ;?> </h2>
                 </div>
+            </div> <!--  ./ File title -->
+            <hr>
+            <!-- File Content -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="event-content">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="image-content">
+                                    <img src="<?php echo base_url('assets/uploads/files/') . $item['thumbnail'] ;?>" alt="File Thumbnail" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h4><strong>Category</strong></h4>
+                                <h4><?php echo $item['title_category'] ?></h4>
+                                <h5>Created at  : <?php echo $item['date_created'] ?></h5>
+                                <h4><strong>Description</strong></h4>
+                                <p><?php echo $item['description'] ?> </p>
+                                <h4 class="text-right">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <?php echo $item['author'] ?>
+                                </h4>
+                                <div class="download-section">
+                                    <p>Download File</p>
+                                    <a href="<?php echo base_url('assets/uploads/files/').$item['file']; ?>" class="btn btn-primary btn-outline">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div> <!-- ./ File Content -->
+            <hr>
+        </div>
+    </div>
+    <div class="row separator-brand">
+        <div class="col-xs-12">
+            <div class="line-brand"></div>
+        </div>
+    </div>
+    <!-- .separator-brand -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="row separator-brand">
+            <div class="col-xs-12">
+                <p>&nbsp;</p>
+                    <div class="copy col-md-6">
+                        &copy; File Gallery. All Right Reserved.
+                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="container">
-        <?php var_dump($item); ?>
-    </div>
+    <!-- ./footer -->
 </div>
 
 
