@@ -23,11 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-6 col-sm-offset-3 gallery_product">
                 <div id="imaginary_container">
                     <form action="<?php echo current_url(); ?>" method="get">
-                        <div class="input-group stylish-input-group">
-                            <input type="text" name="search" class="form-control"  placeholder="Search" >
+                        <div class="input-group stylish-input-group input-lg">
+                            <input type="text" name="search" class="form-control input-lg" placeholder="Search">
                             <span class="input-group-addon">
-                                <button type="submit">
-                                    <span class="glyphicon glyphicon-search"></span>
+                                <button type="submit" class="btn btn-lg">
+                                    <span class="glyphicon glyphicon-search white-color"></span>
                                 </button>
                             </span>
                         </div>
@@ -39,21 +39,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <div class="row">
     <div class="container">
-        <?php foreach($items as $file_item): ?>
-        <div class="file-item">
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="thumbnail">
-                    <img src="<?php echo base_url('assets/uploads/files/') .  $file_item['thumbnail']; ?>"
-                         class="img-responsive" alt="<?php echo $file_item['title'] ?>">
-                    <h4 class="text-center"><?php echo $file_item['title'] ?></h4>
-                    <p><?php echo $file_item['description'] ?></p>
-                    <input type="button" class="btn btn-primary btn-block" value="Download">
+        <?php foreach ($items as $file_item): ?>
+            <div class="file-item">
+                <div class="gallery_product col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div class="thumbnail">
+                        <img src="<?php echo base_url('assets/uploads/files/') . $file_item['thumbnail']; ?>"
+                             class="img-responsive" alt="<?php echo $file_item['title'] ?>">
+                        <a href="<?php echo site_url('home/detail/' . $file_item['id']) ?>">
+                            <h4 class="text-center"><?php echo $file_item['title'] ?></h4>
+                        </a>                        <p><?php echo $file_item['description'] ?></p>
+                        <div class="text-center">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <?php echo $file_item['author'] ?>
+                        </div>
+                        &nbsp;
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endforeach; ?>
     </div>
-    <nav aria-label="Page navigation" class="text-right">
+    <nav aria-label="Page navigation" class="text-center">
         <?php echo $pagination; ?>
     </nav>
 </div>

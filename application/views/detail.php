@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <h5>Created at  : <?php echo $item['date_created'] ?></h5>
                                 <h4><strong>Description</strong></h4>
                                 <p><?php echo $item['description'] ?> </p>
-                                <h4 class="text-right">
+                                <h4>
                                     <span class="glyphicon glyphicon-user"></span>
                                     <?php echo $item['author'] ?>
                                 </h4>
