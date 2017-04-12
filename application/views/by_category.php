@@ -23,11 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-6 col-sm-offset-3 gallery_product">
                 <div id="imaginary_container">
                     <form action="<?php echo current_url(); ?>" method="get">
-                        <div class="input-group stylish-input-group">
-                            <input type="text" name="search" class="form-control" placeholder="Search">
+                        <div class="input-group stylish-input-group input-lg">
+                            <input type="text" name="search" class="form-control input-lg" placeholder="Search">
                             <span class="input-group-addon">
-                                <button type="submit">
-                                    <span class="glyphicon glyphicon-search"></span>
+                                <button type="submit" class="btn btn-lg">
+                                    <span class="glyphicon glyphicon-search white-color"></span>
                                 </button>
                             </span>
                         </div>
